@@ -4,12 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-using AutoIt;
+using System.Windows.Input;
+using System.Runtime.InteropServices;
+
+
 namespace endersniper_lite
 {
+
     class Methods
     {
-        public static long getDate(string name) {
+        [DllImport("user32.dll")]
+        public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
+        public static long getDate(string name)
+        {
             long unix = DateTimeOffset.Now.ToUnixTimeSeconds();
             WebClient client = new WebClient();
             long i = unix - 3196800;
@@ -18,7 +25,7 @@ namespace endersniper_lite
             string uuid2 = uuid1.Remove(0, 1);
             string uuid3 = uuid2.Remove(uuid2.Length - 1);
             string date = client.DownloadString("https://api.mojang.com/user/profiles/" + uuid3 + "/names");
-            
+
             string date1 = date.Substring(date.LastIndexOf(':'), 14);
             string date2 = date1.Substring(1, date1.Length - 1);
             long date3 = Convert.ToInt64(date2) / 1000 + 3196800;
@@ -28,9 +35,19 @@ namespace endersniper_lite
 
 
         }
-        public static void mClick() {
-            AutoItX.MouseClick();
+      
+        
+        public static void clicc()
+        {
+           
+            uint mdown = 0x0002;
+            uint mup = 0x0004;
+            mouse_event(mdown, 0, 0, 0, 0);
+            mouse_event(mup, 0, 0, 0, 0);
+            Console.WriteLine("click");
             Console.WriteLine("Clicked on " + DateTime.Now.ToLocalTime());
+
+
 
         }
     }
