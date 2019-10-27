@@ -11,19 +11,29 @@ namespace endersniper_lite
     {
         static void Main(string[] args)
         {
-            
-            Console.Title = "endersniper lite v0.2";
+            Stopwatch sw1 = new Stopwatch();
+
+            Console.Title = "endersniper lite v0.3";
             Console.Write("Name to snipe: ");
             string name = Console.ReadLine();
-            long time = Methods.getDate(name);
-            Thread.Sleep(1500);
+            sw1.Start();
+            long time = Methods.getDate(name)*1000;
+            
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            while (sw.Elapsed.TotalSeconds < time) {
+            sw1.Stop();
+            while (sw.Elapsed.TotalMilliseconds < time - sw1.Elapsed.Milliseconds - 10000) {
                 Console.Clear();
-                double t = time - sw.Elapsed.TotalSeconds;
+                double t = time - sw.Elapsed.TotalMilliseconds;
                 Console.WriteLine("Time left: " + t);
             }
+            sw.Reset();
+            sw.Start();
+            long ping = Methods.Ping();
+            
+            while (sw.Elapsed.TotalMilliseconds < 10000-ping) { }
+            
+           
             Methods.clicc();
             Console.ReadKey();
             
