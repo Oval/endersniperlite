@@ -1,2 +1,2 @@
 # endersniper
-minecraft name autoclick sniper
+minecraft autoclick name sniper
