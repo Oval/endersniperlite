@@ -5,8 +5,5 @@ C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersnip
 C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.csproj.CoreCompileInputs.cache
 C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.exe
 C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.pdb
-C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\AutoItX3_x64.dll
 C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\AutoItX3.dll
-C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\AutoItX3.Assembly.dll
-C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\AutoItX3.Assembly.xml
-C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.csproj.CopyComplete
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\AutoItX3_x64.dll

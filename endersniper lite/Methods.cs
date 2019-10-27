@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Windows.Input;
 using System.Runtime.InteropServices;
-
+using System.Net.NetworkInformation;
 
 namespace endersniper_lite
 {
@@ -35,8 +35,21 @@ namespace endersniper_lite
 
 
         }
-      
-        
+        public static long Ping()
+        {
+            Ping p = new Ping();
+
+            PingReply pe = p.Send("mojang.com");
+            while (pe.RoundtripTime == 0)
+            {
+                pe = p.Send("mojang.com");
+
+            }
+            Console.WriteLine("Ping: " + pe.RoundtripTime);
+            return pe.RoundtripTime;
+        }
+
+
         public static void clicc()
         {
            
@@ -44,7 +57,7 @@ namespace endersniper_lite
             uint mup = 0x0004;
             mouse_event(mdown, 0, 0, 0, 0);
             mouse_event(mup, 0, 0, 0, 0);
-            Console.WriteLine("click");
+            
             Console.WriteLine("Clicked on " + DateTime.Now.ToLocalTime());
 
 
