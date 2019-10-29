@@ -1,0 +1,7 @@
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\endersniper lite.exe.config
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\endersniper lite.exe
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\bin\Debug\endersniper lite.pdb
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.csprojAssemblyReference.cache
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.csproj.CoreCompileInputs.cache
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.exe
+C:\Users\Omar\source\repos\endersniper lite\endersniper lite\obj\Debug\endersniper lite.pdb
