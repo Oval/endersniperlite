@@ -26,6 +26,7 @@ namespace endersniper_lite
                 Console.Clear();
                 double t = time - sw.Elapsed.TotalMilliseconds;
                 Console.WriteLine("Time left: " + t);
+                Thread.Sleep(1000);
             }
             sw.Reset();
             sw.Start();
