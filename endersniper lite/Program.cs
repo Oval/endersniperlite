@@ -14,8 +14,12 @@ namespace endersniper_lite
             Stopwatch sw1 = new Stopwatch();
 
             Console.Title = "endersniper lite v0.3";
-            Console.Write("Name to snipe: ");
+            Console.WriteLine("Name to snipe: ");
             string name = Console.ReadLine();
+            Console.WriteLine("Requests (5 recommended): ");
+            int reqs = Console.ReadLine();
+            Console.WriteLine("Offset (125 recommended):");
+            int offset = Console.ReadLine();
             sw1.Start();
             long time = Methods.getDate(name)*1000;
             
@@ -32,10 +36,12 @@ namespace endersniper_lite
             sw.Start();
             long ping = Methods.Ping();
             
-            while (sw.Elapsed.TotalMilliseconds < 10000-ping) { }
+            while (sw.Elapsed.TotalMilliseconds < 10000-ping-offset) { }
             
-           
-            Methods.clicc();
+            for(int x = 0;x <= reqs;++x)
+            {
+               Methods.clicc();
+            }
             Console.ReadKey();
             
 
