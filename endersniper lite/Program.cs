@@ -20,6 +20,8 @@ namespace endersniper_lite
             int reqs = Console.ReadLine();
             Console.WriteLine("Offset (125 recommended):");
             int offset = Console.ReadLine();
+            Console.WriteLine("Request Spread (10 recommended):");
+            int requestSpread = Console.ReadLine();
             sw1.Start();
             long time = Methods.getDate(name)*1000;
             
@@ -41,6 +43,7 @@ namespace endersniper_lite
             for(int x = 0;x <= reqs;++x)
             {
                Methods.clicc();
+               Thread.Sleep(requestSpread);
             }
             Console.ReadKey();
             
