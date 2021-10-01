@@ -13,6 +13,7 @@ namespace endersniper_lite
 
     class Methods
     {
+        //This is broken because Mojang broke it.
         [DllImport("user32.dll")]
         public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
         public static long getDate(string name)
@@ -32,9 +33,8 @@ namespace endersniper_lite
             long date4 = date3 - unix;
             Console.WriteLine("Name is released on " + DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(date3)).ToLocalTime());
             return date4;
-
-
         }
+        
         public static long Ping()
         {
             Ping p = new Ping();
@@ -52,16 +52,12 @@ namespace endersniper_lite
 
         public static void clicc()
         {
-           
             uint mdown = 0x0002;
             uint mup = 0x0004;
             mouse_event(mdown, 0, 0, 0, 0);
             mouse_event(mup, 0, 0, 0, 0);
             
             Console.WriteLine("Clicked on " + DateTime.Now.ToLocalTime());
-
-
-
         }
     }
 }
